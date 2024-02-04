@@ -27,7 +27,7 @@ export default function App() {
           ...selectData,
           country: data,
         });
-      });
+      }).catch(err=>console.log(err));
   }, [country]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function App() {
             ...selectData,
             state: data,
           });
-        });
+        }).catch(err=>console.log(err));
     }
   }, [country, isSelected.country]);
 
@@ -58,7 +58,7 @@ export default function App() {
             ...selectData,
             city: data,
           });
-        });
+        }).catch(err=>console.log(err));
     }
   }, [state, isSelected.state]);
 
